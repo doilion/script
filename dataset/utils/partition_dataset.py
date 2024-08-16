@@ -11,7 +11,7 @@ def create_dir(directory):
         os.makedirs(directory)
 
 
-def split_dataset(directory_path, train_ratio=0.8, train_dir='train', test_dir='test'):
+def split_dataset(directory_path, train_ratio=0.75, train_dir='train', test_dir='test'):
     # 获取目录下所有的文件
     files = [f for f in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, f))]
 
@@ -46,5 +46,5 @@ def split_dataset(directory_path, train_ratio=0.8, train_dir='train', test_dir='
 
 
 if __name__ == "__main__":
-    directory_path = r"F:\dataset\new_ucis5k\all\data"
+    directory_path = r"F:\dataset\new_ucis5k\all"
     split_dataset(directory_path)
